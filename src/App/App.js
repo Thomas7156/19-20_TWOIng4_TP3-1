@@ -1,7 +1,8 @@
 import React from 'react';
-import Navbar from './Navbar.js'
-import Tweet from './Tweet.js'
-import Card from './Card.js'
+import './App.css';
+import Navbar from '../Components/Navbar/Navbar.js';
+import Tweet from '../Components/Tweet/Tweet.js';
+import Card from '../Components/Card/Card.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,31 +13,18 @@ class App extends React.Component {
         Leonard: Array(4).fill("Leonard", "Devincre", "13/03/98", "/img/Leonard.jpg"),
         Thomas: Array(4).fill("Thomas", "Lemercier", "07/01/99", "/img/Thomas.png")
       }]
-    }
+    };
   }
 
-  return (
-    <div style={styles.main_container}>
-      <Navbar style={styles.navbar}/>
-      <Card style={styles.card}/>
-      <Tweet style={styles.tweet}/>
-    </div>
-  );
+  render() {
+    return (
+      <div className="main_container">
+        <Navbar className="navbar"/>
+        <Card className="card"/>
+        <Tweet className="tweet"/>
+      </div>
+    );
+  }
 }
-
-const styles = StyleSheet.create({
-  main_container: {
-
-  },
-  navbar: {
-
-  },
-  card: {
-
-  },
-  tweet: {
-
-  }
-})
 
 export default App;
