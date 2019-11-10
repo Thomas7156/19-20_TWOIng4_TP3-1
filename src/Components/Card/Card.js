@@ -25,6 +25,9 @@ class Card extends React.Component {
         <div>
           {this.props.Current[3]}
         </div>
+        <div>
+          {this.props.Current[4]}
+        </div>
       </div>
     );
   }
