@@ -13,7 +13,18 @@ class Card extends React.Component {
   render() {
     return (
       <div>
-        {this.props.Current[0]}
+        <div>
+          {this.props.Current[0]}
+        </div>
+        <div>
+          {this.props.Current[1]}
+        </div>
+        <div>
+          {this.props.Current[2]}
+        </div>
+        <div>
+          {this.props.Current[3]}
+        </div>
       </div>
     );
   }
