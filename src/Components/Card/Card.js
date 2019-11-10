@@ -35,7 +35,7 @@ class Card extends React.Component {
 
         <MDBCol>
           <MDBCard style={{ width: "22rem" }}>
-            <MDBCardImage className="img-fluid" src={(this.props.Current[4])} alt={this.props.Current[4]} waves />
+            <MDBCardImage className="img-fluid" src={this.props.Current[4]} alt={this.props.Current[4]} waves />
             <MDBCardBody>
               <MDBCardTitle>Card title</MDBCardTitle>
               <MDBCardText>
