@@ -1,9 +1,7 @@
 const initialState = {
-  Profils: [{
-    Gregoire: Array(5).fill("Gregoire", "Lenclud", "08/10/98", "/img/Gregoire.png", "0"),
-    Leonard: Array(5).fill("Leonard", "Devincre", "13/03/98", "/img/Leonard.jpg", "0"),
-    Thomas: Array(5).fill("Thomas", "Lemercier", "07/01/99", "/img/Thomas.png", "0")
-  }],
+  Gregoire: Array(5).fill("Gregoire", "Lenclud", "08/10/98", "/img/Gregoire.png", "0"),
+  Leonard: Array(5).fill("Leonard", "Devincre", "13/03/98", "/img/Leonard.jpg", "0"),
+  Thomas: Array(5).fill("Thomas", "Lemercier", "07/01/99", "/img/Thomas.png", "0"),
   Current: Array(5).fill("Gregoire", "Lenclud", "08/10/98", "/img/Gregoire.png", "0")
 }
 
@@ -16,31 +14,31 @@ function setCurrent(state = initialState, action) {
 
     nextState = {
       ...state,
-      Current: state.Profils[0]
+      Current: state.Gregoire
     }
 
-    return nextState || state
+    return nextState || state.Current
 
     case 'Leonard':
 
     nextState = {
       ...state,
-      Current: state.Profils[1]
+      Current: state.Leonard
     }
 
-    return nextState || state
+    return nextState || state.Current
 
     case 'Thomas':
 
     nextState = {
       ...state,
-      Current: state.Profils[2]
+      Current: state.Thomas
     }
 
-    return nextState || state
+    return nextState || state.Current
 
     default:
-    return state
+    return state.Current
   }
 }
 
@@ -57,7 +55,7 @@ function setCurrent(state = initialState, action) {
 //     }
 //
 //     return nextState || state
-  //}
+//}
 
 // export default {setCurrent(), setLike()}
 export default setCurrent

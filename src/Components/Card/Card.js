@@ -1,5 +1,6 @@
 import React from 'react';
 import './Card.css'
+import { connect } from 'react-redux'
 
 class Card extends React.Component {
   constructor(props) {
@@ -12,10 +13,16 @@ class Card extends React.Component {
   render() {
     return (
       <div>
-        Bonsoir
+        {this.props.Current[0]}
       </div>
     );
   }
 }
 
-export default Card;
+const mapStateToProps = state => {
+  return {
+    Current: state.setCurrent.Current
+  }
+}
+
+export default connect(mapStateToProps)(Card);
