@@ -1,16 +1,11 @@
 import React from 'react';
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
 import './App.css';
 import Navbar from '../Components/Navbar/Navbar.js';
 import Tweet from '../Components/Tweet/Tweet.js';
 import Card from '../Components/Card/Card.js';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-  }
-
   render() {
     return (
       <div className="main_container">
