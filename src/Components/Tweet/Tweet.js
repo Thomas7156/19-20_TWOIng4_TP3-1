@@ -11,8 +11,10 @@ class Tweet extends React.Component {
     };
   }
 
-  like() {
+  like(name) {
+    const action = { type: name};
 
+    this.props.dispatch(action);
   }
 
   render() {
@@ -24,7 +26,8 @@ class Tweet extends React.Component {
               <MDBCardText>
                 {this.props.Current[3]}
               </MDBCardText>
-              <MDBBtn color="success"  onClick={() => this.like()}>C'est super ! <MDBIcon far icon="thumbs-up" /></MDBBtn>
+              <MDBBtn color="success"  onClick={() => this.like('INCREASE')}><MDBIcon far icon="thumbs-up" /></MDBBtn>
+              <MDBBtn color="success"  onClick={() => this.like('DECREASE')}><MDBIcon far icon="thumbs-down" /></MDBBtn>
               <MDBBtn color="success">{this.props.Current[5]}</MDBBtn>
             </MDBCardBody>
           </MDBCard>

@@ -47,20 +47,46 @@ function setCurrent(state = initialState, action) {
   }
 }
 
-////////////////////////////////////////
-// Bonus pas encore fini///////////////
-// //////////////////////////////////
+//////////////////////////////////////
+// Bonus /////////////////////////////
+/////////////////////////////////////
 
 // function setLike(state = initialState, action) {
 //   let nextState;
 //
+//   switch (action.type) {
+//
+//     case 'Gregoire':
+//
 //     nextState = {
 //       ...state,
-//       Current[4]+=1
+//       Current: state.Gregoire
 //     }
 //
 //     return nextState || state
-//}
+//
+//     case 'Leonard':
+//
+//     nextState = {
+//       ...state,
+//       Current: state.Leonard
+//     }
+//
+//     return nextState || state
+//
+//     case 'Thomas':
+//
+//     nextState = {
+//       ...state,
+//       Current: state.Thomas
+//     }
+//
+//     return nextState || state
+//
+//     default:
+//     return state
+//   }
+// }
 
-// export default {setCurrent(), setLike()}
+// export default {setCurrent, setLike}
 export default setCurrent
