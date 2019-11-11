@@ -42,24 +42,63 @@ export default function setCurrent(state = initialState, action) {
 
     return nextState || state
 
-    case 'INCREASE':
+    case 'INCREASE': {
 
-    nextState = {
-      ...state,
-      Current: {...state.Current, like: state.Current.like+=1},
-      
+      if(state.Current.firstName === state.Gregoire.firstName) {
+        nextState = {
+          ...state,
+          Current: {...state.Current, like: state.Current.like+=1},
+          Gregoire: {...state.Gregoire, like: state.Gregoire.like+=1}
+        }
+      }
+
+      if(state.Current.firstName === state.Leonard.firstName) {
+        nextState = {
+          ...state,
+          Current: {...state.Current, like: state.Current.like+=1},
+          Gregoire: {...state.Leonard, like: state.Leonard.like+=1}
+        }
+      }
+
+      if(state.Current.firstName === state.Thomas.firstName) {
+        nextState = {
+          ...state,
+          Current: {...state.Current, like: state.Current.like+=1},
+          Gregoire: {...state.Thomas, like: state.Thomas.like+=1}
+        }
+      }
+
+      return nextState || state
     }
 
-    return nextState || state
+    case 'DECREASE': {
 
-    case 'DECREASE':
+      if(state.Current.firstName === state.Gregoire.firstName) {
+        nextState = {
+          ...state,
+          Current: {...state.Current, like: state.Current.like-=1},
+          Gregoire: {...state.Gregoire, like: state.Gregoire.like-=1}
+        }
+      }
 
-    nextState = {
-      ...state,
-      Current: {...state.Current, like: state.Current.like-=1}
+      if(state.Current.firstName === state.Leonard.firstName) {
+        nextState = {
+          ...state,
+          Current: {...state.Current, like: state.Current.like-=1},
+          Gregoire: {...state.Leonard, like: state.Leonard.like-=1}
+        }
+      }
+
+      if(state.Current.firstName === state.Thomas.firstName) {
+        nextState = {
+          ...state,
+          Current: {...state.Current, like: state.Current.like-=1},
+          Gregoire: {...state.Thomas, like: state.Thomas.like-=1}
+        }
+      }
+
+      return nextState || state
     }
-
-    return nextState || state
 
     default:
     return state
@@ -67,7 +106,7 @@ export default function setCurrent(state = initialState, action) {
 }
 
 ////////////////////////////////////////////////////////////////////////
-// Bonus en fonction séparé => marche pas /////////////////////////////
+// Bonus en fonction séparée => marche pas /////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 
 // export function setLike(state = initialState, action) {

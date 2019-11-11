@@ -10,7 +10,7 @@ class App extends React.Component {
   render() {
     return (
       <MDBContainer className="d-flex flex-column flex-center text-center">
-        <Navbar className="h-auto"/>
+        <Navbar className=""/>
         <Card className=""/>
         <Tweet className=""/>
       </MDBContainer>
