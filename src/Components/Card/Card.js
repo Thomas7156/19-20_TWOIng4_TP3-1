@@ -25,10 +25,10 @@ class Card extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="p-4">
         <MDBCol>
-          <MDBCard className={this.state.bgColor} style={{ width: "22rem" }}>
-            <MDBCardImage className="img-fluid rounded" src={this.props.Current[4]} alt={this.props.Current[4]} waves />
+          <MDBCard className={this.state.bgColor} style={{ width: "30rem"}}>
+            <MDBCardImage className="img-fluid rounded-circle" style={{width: "10rem", height: "10rem"}} src={this.props.Current[4]} alt={this.props.Current[4]} waves />
             <MDBCardBody>
               <MDBCardTitle>
                 {this.props.Current[0]+ " "}

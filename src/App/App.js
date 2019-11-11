@@ -9,11 +9,11 @@ import {MDBContainer  } from 'mdbreact';
 class App extends React.Component {
   render() {
     return (
-      <MDBContainer className="">
-        <Navbar className="navbar"/>
-        <Card className="card"/>
-        <Tweet className="tweet"/>
-        </MDBContainer >
+      <MDBContainer className="d-flex flex-column flex-center text-center">
+        <Navbar className="h-auto"/>
+        <Card className=""/>
+        <Tweet className=""/>
+      </MDBContainer>
     );
   }
 }
