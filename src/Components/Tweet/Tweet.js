@@ -24,11 +24,11 @@ class Tweet extends React.Component {
           <MDBCard className="d-flex flex-center" style={{ width: "22rem" }}>
             <MDBCardBody>
               <MDBCardText>
-                {this.props.Current[3]}
+                {this.props.Current.tweet}
               </MDBCardText>
               <MDBBtn color="success"  onClick={() => this.like('INCREASE')}><MDBIcon far icon="thumbs-up" /></MDBBtn>
               <MDBBtn color="success"  onClick={() => this.like('DECREASE')}><MDBIcon far icon="thumbs-down" /></MDBBtn>
-              <MDBBtn color="success">{this.props.Current[5]}</MDBBtn>
+              <MDBBtn color="success">{this.props.Current.like}</MDBBtn>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>

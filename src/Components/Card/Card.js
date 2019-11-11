@@ -28,14 +28,14 @@ class Card extends React.Component {
       <div className="p-4">
         <MDBCol>
           <MDBCard className="align-items-center" color={this.state.bgColor} style={{ width: "30rem"}}>
-            <MDBCardImage className="p-2 img-fluid rounded-circle" style={{width: "10rem", height: "10rem"}} src={this.props.Current[4]} alt={this.props.Current[4]} waves />
+            <MDBCardImage className="p-2 img-fluid rounded-circle" style={{width: "10rem", height: "10rem"}} src={this.props.Current.img} alt={this.props.Current.img} waves />
             <MDBCardBody>
               <MDBCardTitle>
-                {this.props.Current[0]+ " "}
-                {this.props.Current[1]}
+                {this.props.Current.firstName+ " "}
+                {this.props.Current.lastName}
               </MDBCardTitle>
               <MDBCardText>
-                {this.props.Current[2]}
+                {this.props.Current.birth}
               </MDBCardText>
               <MDBBtn onClick={() => this.changeBg()}>Changer le style</MDBBtn>
             </MDBCardBody>
