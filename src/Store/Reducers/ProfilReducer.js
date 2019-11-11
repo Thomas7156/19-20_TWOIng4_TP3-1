@@ -46,7 +46,8 @@ export default function setCurrent(state = initialState, action) {
 
     nextState = {
       ...state,
-      Current: state.Current.like+=1
+      Current: {...state.Current, like: state.Current.like+=1},
+      
     }
 
     return nextState || state
@@ -55,7 +56,7 @@ export default function setCurrent(state = initialState, action) {
 
     nextState = {
       ...state,
-      Current: state.Leonard
+      Current: {...state.Current, like: state.Current.like-=1}
     }
 
     return nextState || state
