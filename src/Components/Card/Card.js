@@ -27,8 +27,8 @@ class Card extends React.Component {
     return (
       <div className="p-4">
         <MDBCol>
-          <MDBCard className={this.state.bgColor} style={{ width: "30rem"}}>
-            <MDBCardImage className="img-fluid rounded-circle" style={{width: "10rem", height: "10rem"}} src={this.props.Current[4]} alt={this.props.Current[4]} waves />
+          <MDBCard className="align-items-center" color={this.state.bgColor} style={{ width: "30rem"}}>
+            <MDBCardImage className="p-2 img-fluid rounded-circle" style={{width: "10rem", height: "10rem"}} src={this.props.Current[4]} alt={this.props.Current[4]} waves />
             <MDBCardBody>
               <MDBCardTitle>
                 {this.props.Current[0]+ " "}
