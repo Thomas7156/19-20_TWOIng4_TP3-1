@@ -4,15 +4,16 @@ import './App.css';
 import Navbar from '../Components/Navbar/Navbar.js';
 import Tweet from '../Components/Tweet/Tweet.js';
 import Card from '../Components/Card/Card.js';
+import {MDBContainer  } from 'mdbreact';
 
 class App extends React.Component {
   render() {
     return (
-      <div className="main_container">
+      <MDBContainer className="">
         <Navbar className="navbar"/>
         <Card className="card"/>
         <Tweet className="tweet"/>
-      </div>
+        </MDBContainer >
     );
   }
 }

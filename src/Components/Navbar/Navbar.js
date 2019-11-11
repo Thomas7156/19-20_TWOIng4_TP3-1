@@ -1,6 +1,7 @@
 import React from 'react';
 import './Navbar.css'
 import { connect } from 'react-redux'
+import { MDBBtn } from 'mdbreact';
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -19,15 +20,15 @@ class Navbar extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={() => this.handleClick("Gregoire")}>
+        <MDBBtn color="info" onClick={() => this.handleClick("Gregoire")}>
           Grégoire
-        </button>
-        <button onClick={() => this.handleClick("Leonard")}>
+        </MDBBtn>
+        <MDBBtn color="info" onClick={() => this.handleClick("Leonard")}>
           Léonard
-        </button>
-        <button onClick={() => this.handleClick("Thomas")}>
+        </MDBBtn>
+        <MDBBtn color="info" onClick={() => this.handleClick("Thomas")}>
           Thomas
-        </button>
+        </MDBBtn>
       </div>
     );
   }
